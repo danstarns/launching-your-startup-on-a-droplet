@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 async function getUsers() {
-  const baseURL = process.env.REACT_APP_API_URL || "/";
+  const baseURL = process.env.REACT_APP_API_URL || "";
 
   const response = await fetch(`${baseURL}/users`);
 
