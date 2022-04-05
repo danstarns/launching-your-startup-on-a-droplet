@@ -25,11 +25,18 @@ export function App() {
 
   return (
     <div className="users">
-      <h1>Users</h1>
+      <h1>Launching your Startup on a Droplet</h1>
+      <a href="https://danielstarns.com">danielstarns.com</a>
       <div>
+        <h2>Users</h2>
+        <p>Users are fetched from the Node.js server that serves this app</p>
+        <p>
+          In the server the users is a .json file however, you would probably
+          swap this out for database connection in production!
+        </p>
         {users.map((user) => (
           <div key={user.name}>
-            <h2>{user.name}</h2>
+            <h3>{user.name}</h3>
             <a href={user.website}>{user.website}</a>
           </div>
         ))}
