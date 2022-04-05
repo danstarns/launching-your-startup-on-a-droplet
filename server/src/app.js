@@ -1,8 +1,9 @@
 const express = require("express");
 const cors = require("cors");
 const expressStaticGzip = require("express-static-gzip");
+const path = require("path");
 
-const STATIC_FOLDER = "../../client/build";
+const STATIC_FOLDER = path.join(__dirname, "../", "../", "client/", "build/");
 const HTTP_PORT = Number(process.env.HTTP_PORT || 5000);
 
 const app = express();
