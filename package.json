@@ -1,0 +1,10 @@
+{
+  "name": "launching-your-startup-on-a-droplet",
+  "version": "1.0.0",
+  "description": "https://danielstarns.com",
+  "scripts": {
+    "postinstall": "cd server && npm install && cd ../client && npm install && npm run build"
+  },
+  "author": "me@danielstarns.com",
+  "license": "MIT"
+}
