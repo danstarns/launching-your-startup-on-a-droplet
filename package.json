@@ -3,8 +3,17 @@
   "version": "1.0.0",
   "description": "https://danielstarns.com",
   "scripts": {
+    "start": "node server/src/index.js",
+    "server": "nodemon",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm run build --prefix client",
     "postinstall": "cd server && npm install && cd ../client && npm install && npm run build"
   },
   "author": "me@danielstarns.com",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.1"
+  }
 }
